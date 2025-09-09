@@ -1,0 +1,66 @@
+/* General page setup */
+body {
+  margin: 20px;
+  font-family: Arial, sans-serif;
+  background-color: lightgray;
+  color: black;
+}
+
+/* Header and navigation */
+#header {
+  background-color: navy;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+.nav {
+  display: flex;              /* flexbox */
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+.nav a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+.nav a:hover { background-color: darkred; }   /* hover effect */
+
+/* Sections */
+.section {
+  background-color: white;
+  margin: 20px 0;
+  padding: 15px;
+  border: 1px solid black;
+}
+
+/* ID selectors for special sections */
+#hero {
+  background-color: lightblue;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Gallery (grid) */
+.gallery {
+  display: grid;                    /* grid */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-top: 10px;
+}
+.card {
+  background-color: #f9f9f9;
+  border: 1px solid gray;
+  padding: 10px;
+  text-align: center;
+}
+.card:hover { background-color: #e0e0e0; }   /* hover effect */
+
+/* Footer */
+#footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+}
