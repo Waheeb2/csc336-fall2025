@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Assignment 3: World Countries Explorer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>World Countries Explorer</h1>
+
+  <!-- Controls -->
+  <div class="controls">
+    <label for="region-select">Filter by region:</label>
+    <select id="region-select" onchange="filterRegion()">
+      <option value="all">All</option>
+      <option value="americas">Americas</option>
+      <option value="europe">Europe</option>
+      <option value="asia">Asia</option>
+      <option value="africa">Africa</option>
+      <option value="oceania">Oceania</option>
+    </select>
+
+    
+    <button onclick="randomizeHighlights()">Randomize Highlights</button>
+    <button onclick="resetStyles()">Reset Styles</button>
+  </div>
+
+  <!-- Countries -->
+  <div id="countries" class="grid">
+    <div class="card" data-region="europe" id="country-switzerland">
+      <img src="Switzerland Flag.png" alt="Flag of Switzerland" class="flag">
+      <h2>Switzerland</h2>
+      <p class="summary">Located in Europe; famous for the Alps, chocolate, and banking system.</p>
+      <div class="facts hidden" id="facts-switzerland" width="950">
+        <ul>
+          <li>Capital: Bern</li>
+          <li>Population: 8.7M</li>
+          <li>Languages: German, French, Italian, Romansh</li>
+          <li>Currency: Swiss Franc (CHF)</li>
+        </ul>
+      </div>
+      <div class="buttons">
+        <button onclick="toggleFacts('switzerland')">Show/Hide Facts</button>
+        <button onclick="addFavorite('Switzerland')">Add to Favorites</button>
+      </div>
+    </div>
+
+    <div class="card" data-region="americas" id="country-canada">
+      <img src="Canada Flag.png" alt="Flag of Canada" class="flag">
+      <h2>Canada</h2>
+      <p class="summary">Located in North America; second-largest country; known for maple syrup, lakes, and hockey.</p>
+      <div class="facts hidden" id="facts-canada">
+        <ul>
+          <li>Capital: Ottawa</li>
+          <li>Population: 40M</li>
+          <li>Languages: English & French</li>
+          <li>Currency: Canadian Dollar (CAD)</li>
+        </ul>
+      </div>
+      <div class="buttons">
+        <button onclick="toggleFacts('canada')">Show/Hide Facts</button>
+        <button onclick="addFavorite('Canada')">Add to Favorites</button>
+      </div>
+    </div>
+
+    <div class="card" data-region="africa" id="country-southafrica">
+      <img src="South Africa Flag.png" alt="Flag of South Africa" class="flag">
+      <h2>South Africa</h2>
+      <p class="summary">Located in Africa; diverse nation with 11 official languages and amazing wildlife.</p>
+      <div class="facts hidden" id="facts-southafrica">
+        <ul>
+          <li>Capitals: Pretoria, Bloemfontein, Cape Town</li>
+          <li>Population: 61M</li>
+          <li>Languages: 11 official (incl. Zulu, Xhosa, Afrikaans, English)</li>
+          <li>Currency: South African Rand (ZAR)</li>
+        </ul>
+      </div>
+      <div class="buttons">
+        <button onclick="toggleFacts('southafrica')">Show/Hide Facts</button>
+        <button onclick="addFavorite('South Africa')">Add to Favorites</button>
+      </div>
+    </div>
+
+    <div class="card" data-region="oceania" id="country-australia">
+      <img src="Australia Flag.png" alt="Flag of Australia" class="flag">
+      <h2>Australia</h2>
+      <p class="summary">Located in Oceania; known for it's dangerous wildlife and amazing sites.</p>
+      <div class="facts hidden" id="facts-australia">
+        <ul>
+          <li>Capital: Canberra</li>
+          <li>Population: 68M</li>
+          <li>Language: English</li>
+          <li>Currency: Australian Dollar (AUD)</li>
+        </ul>
+      </div>
+      <div class="buttons">
+        <button onclick="toggleFacts('australia')">Show/Hide Facts</button>
+        <button onclick="addFavorite('australia')">Add to Favorites</button>
+      </div>
+    </div>
+
+    <div class="card" data-region="asia" id="country-japan">
+      <img src="Japan Flag.png" alt="Flag of Japan" class="flag">
+      <h2>Japan</h2>
+      <p class="summary">Located in Asia; island nation known for technology, anime, and rich traditions.</p>
+      <div class="facts hidden" id="facts-japan">
+        <ul>
+          <li>Capital: Tokyo</li>
+          <li>Population: 125M</li>
+          <li>Language: Japanese</li>
+          <li>Currency: Yen (JPY)</li>
+        </ul>
+      </div>
+      <div class="buttons">
+        <button onclick="toggleFacts('japan')">Show/Hide Facts</button>
+        <button onclick="addFavorite('Japan')">Add to Favorites</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Favorites list -->
+  <div class="favorites">
+    <h2>Favorites</h2>
+    <ul id="fav-list"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
