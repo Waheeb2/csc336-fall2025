@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 4: Guestbook</title>
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>Sign the Guestbook</h1>
+    <div id="add-new-entry">
+        <form id="add-entry-form">
+            <label for="guest-name-field">Name</label>
+            <input id="guest-name-field" type="text" required />
+
+            <label for="guest-color-field">Favorite Color</label>
+            <input id="guest-color-field" type="color" required />
+
+            <label for="guest-message-field">Message</label>
+            <textarea id="guest-message-field" rows="3" required></textarea>
+
+            <button type="submit" id="add-entry-button">Add Entry</button>
+        </form>
+        <p id="error-message" class="error"></p>
+    </div>
+
+    <h1>Guestbook Entries</h1>
+    <div id="all-entries"></div>
+</body>
+</html>
