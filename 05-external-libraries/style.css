@@ -1,0 +1,70 @@
+/* General page styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff8f0;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Title */
+h1 {
+  color: darkred;
+  margin-bottom: 10px;
+}
+
+/* Tabs */
+.tabs {
+  margin: 20px 0;
+}
+
+.tablink {
+  background-color: #ddd;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 0 5px;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.tablink:hover {
+  background-color: #bbb;
+}
+
+.tabcontent {
+  margin-top: 15px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fff;
+}
+
+/* Menu items */
+.menu-item {
+  display: inline-block;
+  margin: 15px;
+  text-align: center;
+}
+
+.menu-item img {
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  margin-bottom: 8px;
+}
+
+/* Deal button */
+button#dealBtn {
+  background-color: tomato;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button#dealBtn:hover {
+  background-color: darkred;
+}

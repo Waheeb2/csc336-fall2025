@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pizza Palace</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Toastify CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Welcome to Pizza Palace!</h1>
+    </header>
+
+    <!-- Tabs -->
+    <nav class="tabs">
+      <button class="tablink" onclick="openTab('menu')">Menu</button>
+      <button class="tablink" onclick="openTab('location')">Location</button>
+      <button class="tablink" onclick="openTab('hours')">Hours</button>
+    </nav>
+
+    <!-- Tab content -->
+    <div id="menu" class="tabcontent">
+      <h2>Our Menu</h2>
+
+      <div class="menu-item">
+        <img src="Margherita Pizza.png" alt="Margherita Pizza" width="200">
+        <p>Margherita</p>
+      </div>
+
+      <div class="menu-item">
+        <img src="Pepperoni Pizza.png" alt="Pepperoni Pizza" width="250">
+        <p> Pepperoni</p>
+      </div>
+
+      <div class="menu-item">
+        <img src="Vegetarian Pizza.png" alt="Vegetarian Pizza" width="250">
+        <p> Vegetarian Pizza</p>
+      </div>
+
+      <div class="menu-item">
+        <img src="Chicken Wings.png" alt="Chicken Wings" width="250">
+        <p> BBQ Chicken</p>
+      </div>
+    </div>
+
+    <div id="location" class="tabcontent" style="display:none">
+      <h2>Find Us</h2>
+      <p>123 Pizza Street, Washington D.C.</p>
+    </div>
+
+    <div id="hours" class="tabcontent" style="display:none">
+      <h2>Opening Hours</h2>
+      <p>Mon–Fri: 11am – 10pm <br> Sat–Sun: 12pm – 11pm</p>
+    </div>
+
+    <!-- Deal button -->
+    <div class="special">
+      <button id="dealBtn">Show Today’s Deal</button>
+    </div>
+  </div>
+
+  <!-- Toastify JS -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <!-- Your custom JS -->
+  <script src="script.js"></script>
+</body>
+</html>
