@@ -1,0 +1,67 @@
+{
+  "regions": [
+    {
+      "name": "Russia",
+      "climate": "Cold",
+      "towns": [
+        {
+          "name": "Moscow",
+          "population": 13000000,
+          "notable_people": [
+            {
+              "name": "Ivan A.",
+              "role": "Lawyer",
+              "mood": "Playful",
+              "items": [
+                "Client Suitcase",
+                {
+                  "name": "Alex S.",
+                  "role": "Client",
+                  "mood": "Serious"
+                }
+              ]
+            },
+            {
+              "name": "Peter T.",
+              "role": "Chef",
+              "mood": "Happy",
+              "items": [
+                "Pantry",
+                {
+                  "size": "Large",
+                  "stocked": "Yes",
+                  "organized": "No"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Australia",
+      "climate": "Hot",
+      "towns": [
+        {
+          "name": "Melbourne",
+          "population": 5350000,
+          "notable_people": [
+            {
+              "name": "Grady A.",
+              "role": "Boxer",
+              "mood": "Mad",
+              "items": [
+                "Backpack",
+                {
+                  "brand": "Nike",
+                  "size": "Medium",
+                  "weight": "4lbs"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
