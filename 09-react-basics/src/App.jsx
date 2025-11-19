@@ -1,58 +1,40 @@
-import { useState } from "react";
-import ListItem from "./ListItem";
-import "./App.css";
+import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
 
-// main App component
+import Home from "./Home.jsx";
+import About from "./About.jsx";
+import ApiPage from "./RandomDogs.jsx";
+
+// Main app component that sets up client-side routing using React Router.
 function App() {
-  // Create state for the input field (text the user types)
-  const [inputValue, setInputValue] = useState("");
-
-  // Create state for the list of items
-  const [items, setItems] = useState([
-    { text: "Finish homework", important: true },
-    { text: "Prepare Dinner", important: true },
-    { text: "Walk the dog", important: false },
-    { text: "Read a book", important: false }
-  ]);
-
-  // Function to add a new item to the list
-  function handleAdd() {
-    // Ignore if input is empty
-    if (inputValue.trim() === "") return;
-
-    // Add a new item to the array (spread existing items first)
-    setItems([...items, { text: inputValue, important: false }]);
-
-    // Clear  input field
-    setInputValue("");
-  }
 
   return (
-    <div>
-      <h1>My To Do List</h1>
+    <>
+      <BrowserRouter>
+        
+        <nav
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            gap: "5px",
+            padding: "20px",
+            fontSize: "20px"
+          }}
+        >
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/about">About</NavLink>
+          <NavLink to="/api">Dog API</NavLink>
+        </nav>
 
-      {/* Input for new item and button to add it */}
-      <input
-        type="text"
-        value={inputValue}
-        onChange={(e) => setInputValue(e.target.value)}
-        placeholder="Type in new task..."
-      />
-      <button onClick={handleAdd}>Add</button>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/api" element={<ApiPage />} />
+        </Routes>
 
-      {/* Loop through the array and display each item */}
-      <ul>
-        {items.map((item, index) => (
-          <ListItem
-            key={index}
-            text={item.text}
-            important={item.important}
-          />
-        ))}
-      </ul>
-    </div>
+      </BrowserRouter>
+    </>
   );
 }
-
 
 export default App;
