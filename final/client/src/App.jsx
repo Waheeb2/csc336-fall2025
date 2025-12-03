@@ -5,8 +5,13 @@ function App() {
   const[fromServer, setFromServer] = useState({something: 0});
 
   useEffect(() => {
-    setFromServer({something:99999});
-  }, []);
+
+    fetch("/api/data")
+      .then(result =>  result.json())
+      .then(data => setFromServer(data));
+
+      }, []);
+ 
 
   return (
     <>
